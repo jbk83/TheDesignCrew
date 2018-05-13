@@ -1,0 +1,17 @@
+@import 'lato';
+@import "bootstrap-sprockets";
+
+// Core variables and mixins
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
+
+// Core CSS
+@import "bootstrap/alerts";
+@import "bootstrap/panels";
+@import "bootstrap/close";
+
+@import 'components/footer';
+@import 'components/home';
+@import 'components/navbar';
+
+@import 'base/main';

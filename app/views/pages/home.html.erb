@@ -1,0 +1,215 @@
+<div class="home-container">
+  <div class="home-section">
+    <div class="home-title">Devenez UX/UI designer</div>
+    <div class="home-subtitle">
+      <%= "Solutionnez les problèmes de demain en vous formant \n
+      aux techniques de design d'expériences et d'interfaces." %>
+    </div>
+
+    <%= form_tag "pages", id: "home_sign_in", class: "home-inputcontainer", url: pages_path do %>
+      <input type="text" name="email" class="home-input" placeholder="Saisissez votre adresse email"/>
+      <div class="">
+        <button type="submit" class="btn btn-primary home-inputbutton">
+          Accès en avant-première
+        </button>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="home-section">
+    <div id="formation" class="home-gradient mod-left">
+      <div>
+        <div class="home-title2">
+          Formation
+        </div>
+        <div class="home-subtitle2 mod-fixwidth">
+          <%= "Une formation complète \n et accessible à tous" %>
+        </div>
+        <div class="home-subtitle">
+          <%= "Que vous soyiez en reconversion professionnelle ou que \n
+            vous souhaitiez perfectionner vos compétences en \n
+            design UX/UI, cette formation est faite pour vous." %>
+        </div>
+      </div>
+    </div>
+    <div class="home-subcontainer">
+      <div class="home-subsection">
+        <div class="home-titlesubsection">
+          Une formation 100% en ligne
+        </div>
+        <div class="home-subtitle">
+          <%= "Bénéficiez de plus de 100 heures de formation, \n
+           avec des podcasts, du contenu texte et des cas \n
+           pratiques à réaliser, le tout disponible dans votre \n
+           espace personnel." %>
+        </div>
+      </div>
+      <div class="home-subsection">
+        <div class="home-titlesubsection">
+          Un suivi personnalisé
+        </div>
+        <div class="home-subtitle">
+          <%= "Des mentors, parmi les meilleurs designers \n
+           français, sont là pour répondre à toutes vos \n
+           questions via un groupe Slack dédié." %>
+        </div>
+      </div>
+      <div class="home-subsection">
+        <div class="home-titlesubsection">
+          Une vraie communauté
+        </div>
+        <div class="home-subtitle">
+          <%= "Échangez avec les autres élèves sur le groupe \n
+            Slack et participez aux événements que nous \n
+            organisons." %>
+        </div>
+      </div>
+    </div>
+
+    <div class="home-gradient mod-nomargin">
+      <div>
+        <div class="home-subtitle2 mod-padding">
+          <%= "Demandez le programme" %>
+        </div>
+        <ul>
+          <li class="home-tabview active">
+            <button type="button" class="home-panelbutton js-showPanel active" data-target="introduction">
+              01 - introduction
+            </button>
+          </li>
+          <li class="home-tabview">
+            <button type="button" class="home-panelbutton js-showPanel" data-target="design">
+              02 - le design centré sur l'humain
+            </button>
+          </li>
+          <li class="home-tabview">
+            <button type="button" class="home-panelbutton js-showPanel" data-target="methodes">
+              03 - les méthodes UX
+            </button>
+          </li>
+          <li class="home-tabview">
+            <button type="button" class="home-panelbutton js-showPanel" data-target="interfaces">
+              04 - réaliser des interfaces
+            </button>
+          </li>
+          <li class="home-tabview">
+            <button type="button" class="home-panelbutton js-showPanel" data-target="useCases">
+              05 - cas pratique
+            </button>
+          </li>
+        </ul>
+      </div>
+      <div class="home-panel">
+        <div id="introduction" class="home-itempanel mod-visible">
+          <div class="home-paneltitle"> Introduction </div>
+          <div class="home-textpanel">
+            <p>
+              Qu’est-ce que le design ? Quelle est son origine ?
+              Quelle est la différence entre UX & UI ? Pourquoi l’UX/UI design
+              est-il si populaire dans notre modèle de société actuel ?
+            </p>
+            <p>
+              Lors de l’introduction, nous répondrons à ces questions
+              qui sont fondamentales afin de comprendre le design dans
+              sa globalité. Poser les bases nous permettra d’aborder la suite
+              de la formation plus sereinement, avec un niveau de culture générale
+              design plus important.
+            </p>
+          </div>
+        </div>
+        <div id="design" class="home-itempanel">
+          <div class="home-paneltitle"> Le design centré sur l'humain </div>
+          <div class="home-textpanel">
+            <p>
+              La conception centrée sur l’humain offre aux concepteurs de solutions
+              de toute nature une chance de concevoir avec les communautés,
+              de comprendre profondément les personnes qu’ils cherchent à servir,
+              de rêver des idées et de créer de nouvelles solutions innovantes
+              ancrées dans les besoins réels des gens.
+            </p>
+            <p>
+              Vous apprendrez dans ce chapitre l’état d’esprit à avoir et le process à mettre en place.
+            </p>
+          </div>
+        </div>
+        <div id="methodes" class="home-itempanel">
+          <div class="home-paneltitle"> Les méthodes UX </div>
+          <div class="home-textpanel">
+            <p>
+              Dans ce chapitre, vous apprendrez à maitriser l’ensemble des techniques
+              UX qui vous serviront tout au long de la conception de votre produit
+              centré sur l’utilisateur. Wireframe, personne, test utilisateur, analytics... tout y passe !
+            </p>
+          </div>
+        </div>
+        <div id="interfaces" class="home-itempanel">
+          <div class="home-paneltitle"> Réaliser des interfaces </div>
+          <div class="home-textpanel">
+            <p>
+              Une fois votre expérience utilisateur définie (UX), il est temps de passer
+              à la réalisation de l’interface (UI). Pour se faire, nous vous apprendrons
+              les bases graphiques et cognitives à suivre. Nous vous guiderons également
+              pas à pas dans la prise en main de Sketch, l’outil de référence pour la
+              conception d’interfaces.
+            </p>
+          </div>
+        </div>
+        <div id="useCases" class="home-itempanel">
+          <div class="home-paneltitle"> Cas pratique </div>
+          <div class="home-textpanel">
+            <p>
+              Il est maintenant temps de mettre en pratique l’ensemble des connaissances
+              acquises via un cas pratique imposé. Nous vous jugerons sur les études
+              réalisées en amont, les techniques utilisées et la réalisation finale
+              de votre interface.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="reseau" class="home-inversegradient">
+      <div>
+        <div class="home-title2">
+          Réseau de startups
+        </div>
+        <div class="home-subtitle2 mod-fixwidth2">
+          <%= "Une formation dispensée \n
+            par les meilleurs designers" %>
+        </div>
+        <div class="home-subtitle">
+          <%= "Tout au long de votre formation, vous serez \n
+            accompagné(e) par les meilleurs designers français, \n
+            actuellement en poste dans les plus belles startups \n
+            françaises à forte croissance. Ce réseau fait notre \n
+            force et nous permet, à l’issue de votre formation, de vous \n
+            mettre en relation en vue d’une éventuelle embauche." %>
+        </div>
+      </div>
+      <div class="home-containerright">
+        <span class="home-logo mod-algolia"></span>
+        <span class="home-logo mod-blablacar"></span>
+        <span class="home-logo mod-heetch"></span>
+        <span class="home-logo mod-lydia"></span>
+        <span class="home-logo mod-zenly"></span>
+      </div>
+    </div>
+    <div id="contact" class="home-gradient mod-left">
+      <div>
+        <div class="home-title2">
+          Contact
+        </div>
+        <div class="home-subtitle2">
+          <p>
+            Vous avez d’autres questions ? </br>
+            Contactez-nous !
+          </p>
+        </div>
+        <div class="home-subtitle">
+          <%= "Nous serons ravi de répondre à vos questions.
+          Surtout, n’hésitez pas." %>
+        </div>
+        <%= link_to "Contacter via Messenger", "https://www.facebook.com/thedesigncrewfrance/", class: "home-linkbutton" %>
+      </div>
+    </div>
+  </div>
+</div>

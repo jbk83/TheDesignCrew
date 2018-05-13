@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>PublicWebsite</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body data-spy="scroll" data-target="navbar" data-offset="50">
+    <%= render "layouts/navbar" %>
+    <%= render "shared/alerts" %>
+    <div class="container">
+      <main class="mainContent">
+        <%= yield %>
+      </main>
+    </div>
+    <%= render "layouts/footer" %>
+    <%= javascript_include_tag 'application' %>
+  </body>
+</html>

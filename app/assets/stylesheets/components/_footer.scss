@@ -1,0 +1,40 @@
+.footer {
+  display: flex;
+  height: 300px;
+  justify-content: space-around;
+  margin: auto;
+  max-width: 1000px;
+}
+
+.footer-column {
+  ul {
+    padding: 0;
+  }
+}
+
+.footer-link {
+  list-style-type: none;
+  margin-bottom: 15px;
+
+  a {
+    color: #9EA0A6;
+    font-size: 16px;
+    text-decoration: none;
+  }
+}
+
+.footer-logocontainer {
+  position: relative;
+}
+
+.footer-logocontainer + .footer-link {
+  color: #9EA0A6;
+  font-size: 16px;
+  position: relative;
+  top: 50px;
+}
+
+.footer-title {
+  margin-top: 10px;
+  font-size: 18px;
+}
