@@ -1,7 +1,6 @@
 .footer {
   display: flex;
-  height: 300px;
-  justify-content: space-between;
+  height: 200px;
   margin: auto;
   max-width: 1000px;
 }
@@ -9,6 +8,10 @@
 .footer-column {
   ul {
     padding: 0;
+  }
+
+  &.mod-alone {
+    margin: 11px 0 0 80px;
   }
 }
 

@@ -6,14 +6,9 @@
       aux techniques de design d'expériences et d'interfaces." %>
     </div>
 
-    <%= form_tag "pages", id: "home_sign_in", class: "home-inputcontainer", url: pages_path do %>
-      <input type="text" name="email" class="home-input" placeholder="Saisissez votre adresse email"/>
-      <div class="">
-        <button type="submit" class="btn btn-primary home-inputbutton">
-          Accès en avant-première
-        </button>
-      </div>
-    <% end %>
+    <div>
+      <%= link_to "Inscription gratuite", "https://thedesigncrew.typeform.com/to/n7tiUZ", class: "button-link" %>
+    </div>
 
     <div class="home-discover">
       <%= link_to "#formation", class: "home-discoverlink glyphicon glyphicon-triangle-bottom" do %>
@@ -205,10 +200,10 @@
           Contact
         </div>
         <div class="home-subtitle2">
-          <p>
-            Vous avez d’autres questions ? </br>
-            Contactez-nous !
-          </p>
+          <div>
+            <div>Vous avez d’autres questions ? </div>
+            <div>Contactez-nous !</div>
+          </div>
         </div>
         <div class="home-subtitle">
           <%= "Nous serons ravi de répondre à vos questions.
