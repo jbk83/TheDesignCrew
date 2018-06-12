@@ -3,8 +3,13 @@
 }
 
 .home-containerright {
+  height: 600px;
   position: relative;
-  width: 500px;
+
+  @include md {
+    height: auto;
+    width: 500px;
+  }
 }
 
 .home-containerreseau {
@@ -41,26 +46,38 @@
 }
 
 .home-gradient {
-  display: flex;
-  justify-content: space-between;
-  min-height: 530px;
-
-  &.mod-left {
-    justify-content: flex-start;
-  }
-
   &.mod-nomargin {
     margin: 0;
+  }
+
+  &.mod-left {
+    height: 380px;
+    justify-content: flex-start;
+
+    @include md {
+      height: auto;
+    }
+  }
+
+  @include md {
+    display: flex;
+    justify-content: space-between;
+    min-height: 530px;
   }
 
   &::before {
     background: linear-gradient(270.93deg, #FFFFFF 0%, #F8F8F8 100%);
     content: "";
-    height: 530px;
+    height: 375px;
     left: -75px;
     position: absolute;
-    width: 640px;
+    width: 100%;
     z-index: -1;
+
+    @include md {
+      height: 530px;
+      width: 640px;
+    }
   }
 }
 
@@ -85,9 +102,7 @@
 }
 
 .home-inversegradient {
-  display: flex;
-  justify-content: space-between;
-  min-height: 650px;
+
 
   &::before {
     background: linear-gradient(90.93deg, #FFFFFF 0%, #F8F8F8 100%);
@@ -95,8 +110,17 @@
     height: 650px;
     position: absolute;
     right: 0;
-    width: 640px;
     z-index: -1;
+
+    @include md {
+      width: 640px;
+    }
+  }
+
+  @include md {
+    display: flex;
+    justify-content: space-between;
+    min-height: 650px;
   }
 }
 
@@ -133,10 +157,13 @@
 
 .home-itempanel {
   display: none;
-  width: 420px;
 
   &.mod-visible {
     display: block;
+  }
+
+  @include md {
+    width: 420px;
   }
 }
 
@@ -148,83 +175,132 @@
 
   &.mod-algolia {
     background: image-url('entreprises/algolia.png');
-    right: 262px;
+    left: 16%;
     top: 420px;
+
+    @include md {
+      right: 262px;
+    }
   }
 
   &.mod-blablacar {
     background: image-url('entreprises/blablacar.png');
     height: 200px;
-    right: 110px;
+    right: 0;
     top: 100px;
     width: 200px;
+
+    @include md {
+      right: 110px;
+    }
   }
 
   &.mod-heetch {
     background: image-url('entreprises/heetch.png');
-    right: 320px;
+    left: 0;
     top: 250px;
+
+    @include md {
+      right: 320px;
+    }
   }
 
   &.mod-lydia {
     background: image-url('entreprises/lydia.png');
-    right: 122px;
+    right: 0;
     top: 310px;
+
+    @include md {
+      right: 122px;
+    }
   }
 
   &.mod-zenly {
     background: image-url('entreprises/zenly.png');
-    right: 320px;
+    left: 0;
     top: 100px;
+
+    @include md {
+      right: 320px;
+    }
   }
 }
 
 .home-subcontainer {
-  position: relative;
+  height: 800px;
   margin: 100px 0;
+  position: relative;
 
   &::before {
     background: image-url("secondary_visual.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 290px 273px;
     content: '';
-    height: 401px;
-    left: 530px;
+    height: 350px;
     position: absolute;
-    top: -10px;
-    width: 480px;
+    top: 500px;
+    width: 100%;
     z-index: -1;
+  }
+
+  @include md {
+    &::before {
+      background: image-url("secondary_visual.png");
+      content: '';
+      height: 401px;
+      left: 530px;
+      position: absolute;
+      top: -10px;
+      width: 480px;
+      z-index: -1;
+    }
   }
 }
 
 .home-subtitle {
   color: #9EA0A6;
+  display: flex;
   font-size: 16px;
   margin-bottom: 48px;
-  width: 400px;
+
+  &.mod-textcenter {
+    text-align: center;
+  }
+
+  @include md {
+    text-align: left;
+    width: 400px;
+  }
 }
 
 .home-subtitle2 {
   font-family: Titillium Web;
-  font-size: 36px;
+  font-size: 26px;
   font-weight: 100;
-  line-height: 55px;
+  line-height: 45px;
   margin-bottom: 20px;
 
   &.mod-fixwidth {
-    width: 377px;
+    max-width: 377px;
   }
 
-  &.mod-fixwidth2 {
-    width: 410px;
-  }
+  @include md {
+    font-size: 36px;
+    line-height: 55px;
 
-  &.mod-padding {
-    padding: 50px 0 20px;
+    &.mod-fixwidth2 {
+      width: 410px;
+    }
+
+    &.mod-padding {
+      padding: 50px 0 20px;
+    }
   }
 }
 
 .home-tabview {
   margin-bottom: 10px;
-  width: 300px;
 
   &.active {
     background-color: #FFF;
@@ -233,7 +309,9 @@
 }
 
 .home-panel {
-  margin-top: 160px;
+  @include md {
+    margin-top: 160px;
+  }
 }
 
 .home-paneltitle {
@@ -269,23 +347,52 @@
   }
 }
 
+.home-subscribe {
+  display: flex;
+  justify-content: center;
+
+  @include md {
+    display: block;
+  }
+}
+
 .home-title {
+  display: flex;
   font-family: Titillium Web;
-  font-size: 36px;
+  font-size: 26px;
   font-weight: 300;
-  margin: 305px 0 20px;
+  justify-content: center;
+  margin: 20px 0;
   position: relative;
-  width: 400px;
 
   &::before {
     background: image-url("main_visual.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 365px 315px;
     content: '';
-    height: 607px;
-    left: 320px;
+    height: 330px;
     position: absolute;
-    top: -195px;
-    width: 658px;
+    top: 252px;
+    width: 100%;
     z-index: -1;
+  }
+
+  @include md {
+    display: block;
+    margin: 305px 0 20px;
+    width: 400px;
+
+    &::before {
+      background: image-url("main_visual.png");
+      content: '';
+      height: 607px;
+      left: 320px;
+      position: absolute;
+      top: -195px;
+      width: 658px;
+      z-index: -1;
+    }
   }
 }
 
@@ -295,8 +402,12 @@
   font-size: 12px;
   font-weight: bold;
   margin-bottom: 20px;
-  padding-top: 100px;
+  padding-top: 60px;
   text-transform: uppercase;
+
+  @include md {
+    padding-top: 100px;
+  }
 }
 
 .home-titlesubsection {
@@ -306,5 +417,11 @@
 }
 
 .home-section {
-  margin-bottom: 150px;
+  &.mod-fixheight {
+    height: 600px;
+  }
+
+  @include md {
+    margin-bottom: 150px;
+  }
 }

@@ -3,11 +3,17 @@
     <div class="navbar-logocontainer">
       <%= link_to "", root_path, class: "navbar-logo" %>
     </div>
+    <div class="hidden-md hidden-lg hidden-xl navbar-iconMenu">
+      <button
+        class="js-navbarMenu">
+        <span class="glyphicon glyphicon-menu-hamburger navbar-iconMenu"></span>
+      </button>
+    </div>
     <ul class="navbar-listitem">
       <li class="navbar-item js-navbar"><%= link_to "Formation", "#formation", class: "navbar-itemlink" %></li>
       <li class="navbar-item js-navbar"><%= link_to "Réseau de startups", "#reseau", class: "navbar-itemlink" %></li>
       <li class="navbar-item js-navbar"><%= link_to "Contact", "#contact", class: "navbar-itemlink" %></li>
-      <li><%= link_to "Inscription gratuite", "https://thedesigncrew.typeform.com/to/n7tiUZ", target: "_blank", class: "button-link" %></li>
+      <li class="navbar-item"><%= link_to "Inscription gratuite", "https://thedesigncrew.typeform.com/to/n7tiUZ", target: "_blank", class: "button-link" %></li>
     </ul>
   </div>
 </nav>

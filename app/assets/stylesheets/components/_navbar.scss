@@ -19,7 +19,16 @@
   max-width: 1000px;
 }
 
+.navbar-iconMenu {
+  font-size: 20px;
+  position: absolute;
+  right: 12px;
+  top: 12px;
+}
+
 .navbar-item {
+  align-items: center;
+  background-color: #fff;
   display: flex;
   height: 100%;
   justify-content: center;
@@ -38,16 +47,28 @@
 }
 
 .navbar-listitem {
-  align-items: center;
-  display: flex;
   list-style-type: none;
   margin: 0;
+  position: relative;
+  top: 70px;
+  width: 100%;
+
+  &.collapse {
+    display: none;
+  }
+
+  @include md {
+    align-items: center;
+    display: flex;
+    top: 0;
+    width: auto;
+  }
 }
 
 .navbar-logo {
   &::before {
-    content: "";
     background: image-url("TheDesignCrew.svg");
+    content: "";
     height: 18px;
     position: absolute;
     top: 27px;

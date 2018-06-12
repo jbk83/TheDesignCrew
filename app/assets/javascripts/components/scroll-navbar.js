@@ -6,7 +6,19 @@ $(window).scroll((e) => {
    }
 });
 
+$(".js-navbarMenu").on("click", (event) => {
+  let listItem = $(".navbar-listitem");
+  if (listItem.hasClass("collapse")) {
+    listItem.removeClass("collapse");
+  } else {
+    listItem.addClass("collapse");
+  }
+});
+
 $(() => {
+  if ($(window).width() < 992) {
+    $(".navbar-listitem").addClass("collapse");
+  }
   $(".js-navbar").on("click", (event) => {
     event.preventDefault();
 
