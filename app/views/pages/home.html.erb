@@ -72,7 +72,7 @@
         <div class="home-subtitle2 mod-padding">
           <%= "Demandez le programme" %>
         </div>
-        <ul>
+        <ul class="hidden-xs hidden-sm">
           <li class="home-tabview active">
             <button type="button" class="home-panelbutton js-showPanel active" data-target="introduction">
               01 - introduction
@@ -99,6 +99,16 @@
             </button>
           </li>
         </ul>
+        <div class="home-selectContainer hidden-md hidden-lg">
+          <select class="home-select js-selectHome">
+            <option value="introduction">01 - introduction</option>
+            <option value="design">02 - le design centré sur l'humain</option>
+            <option value="methodes">03 - les méthodes UX</option>
+            <option value="interfaces">04 - réaliser des interfaces</option>
+            <option value="useCases">05 - cas pratique</option>
+          </select>
+          <span class="caret">&#9660;</span>
+        </div>
       </div>
       <div class="home-panel">
         <div id="introduction" class="home-itempanel mod-visible">

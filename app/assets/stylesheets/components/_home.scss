@@ -176,7 +176,7 @@
   &.mod-algolia {
     background: image-url('entreprises/algolia.png');
     left: 16%;
-    top: 420px;
+    top: 370px;
 
     @include md {
       right: 262px;
@@ -187,7 +187,7 @@
     background: image-url('entreprises/blablacar.png');
     height: 200px;
     right: 0;
-    top: 100px;
+    top: 50px;
     width: 200px;
 
     @include md {
@@ -198,7 +198,7 @@
   &.mod-heetch {
     background: image-url('entreprises/heetch.png');
     left: 0;
-    top: 250px;
+    top: 200px;
 
     @include md {
       right: 320px;
@@ -208,7 +208,7 @@
   &.mod-lydia {
     background: image-url('entreprises/lydia.png');
     right: 0;
-    top: 310px;
+    top: 260px;
 
     @include md {
       right: 122px;
@@ -218,7 +218,7 @@
   &.mod-zenly {
     background: image-url('entreprises/zenly.png');
     left: 0;
-    top: 100px;
+    top: 50px;
 
     @include md {
       right: 320px;
@@ -262,7 +262,6 @@
   color: #9EA0A6;
   display: flex;
   font-size: 16px;
-  margin-bottom: 48px;
 
   &.mod-textcenter {
     text-align: center;
@@ -270,6 +269,7 @@
 
   @include md {
     text-align: left;
+    margin-bottom: 48px;
     width: 400px;
   }
 }
@@ -318,6 +318,33 @@
   font-family: Titillium Web;
   font-size: 24px;
   margin-bottom: 20px;
+}
+
+.home-select {
+  background-color: #FFF;
+  border: 0;
+  border-radius: 2px;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.15);
+  color: #6D9BF1;
+  font-size: 12px;
+  height: 47px;
+  margin-bottom: 15px;
+  outline: 0;
+  padding: 0 10px;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.home-selectContainer {
+  position: relative;
+
+  .caret {
+    color: #6D9BF1;
+    font-size: 12px;
+    position: absolute;
+    right: 10px;
+    top: 15px;
+  }
 }
 
 .home-textpanel {

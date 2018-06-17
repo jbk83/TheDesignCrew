@@ -7,4 +7,10 @@ $(() => {
     $(e.currentTarget).addClass("active");
     $("#" + data).addClass("mod-visible");
   });
+
+  $(".js-selectHome").change((e) => {
+    var data = $('option:selected').val();
+    $(".mod-visible").removeClass("mod-visible");
+    $("#" + data).addClass("mod-visible");
+  });
 });
